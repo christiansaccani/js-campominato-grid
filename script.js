@@ -32,13 +32,12 @@ function progressiveNum (squares) {
 }
 
 const startBtn = document.querySelector("#start-btn");
-let userChoice;
 
 startBtn.addEventListener("click", function() {
 
     document.querySelector(".map-container").innerHTML = '';   //Per svuotare la pagina corrente al click
 
-    userChoice = document.querySelector("#difficult-select").value
+    const userChoice = document.querySelector("#difficult-select").value
     console.log(userChoice);
 
     if (userChoice == "hard") {
