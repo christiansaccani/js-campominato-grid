@@ -56,6 +56,3 @@ startBtn.addEventListener("click", function() {
     }
 }
 )
-
-
-
