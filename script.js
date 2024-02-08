@@ -9,7 +9,7 @@ function progressiveNum (squares) {
 
         if (squares == 100) {
 
-            newElement.classList.add("hard");        
+            newElement.classList.add("easy");        
             
         } else if (squares == 81) {
 
@@ -17,14 +17,15 @@ function progressiveNum (squares) {
 
         } else if (squares == 49) {
 
-            newElement.classList.add("easy"); 
+            newElement.classList.add("hard"); 
 
         }
 
         newElement.addEventListener("click", function() {
 
+            // this si riferisce a newElement
             console.log(this.innerText);
-            this.classList.toggle("active");  
+            this.classList.add("active");  
 
             }
         )
@@ -40,7 +41,7 @@ startBtn.addEventListener("click", function() {
     const userChoice = document.querySelector("#difficult-select").value
     console.log(userChoice);
 
-    if (userChoice == "hard") {
+    if (userChoice == "easy") {
 
         progressiveNum (100);
 
@@ -48,7 +49,7 @@ startBtn.addEventListener("click", function() {
 
         progressiveNum (81);
 
-    } else if (userChoice == "easy") {
+    } else if (userChoice == "hard") {
 
         progressiveNum (49);
 
